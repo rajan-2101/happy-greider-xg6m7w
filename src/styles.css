@@ -1,0 +1,286 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #fff5f8;
+  font-size: 16px;
+  color: #333;
+  overflow: hidden;
+}
+
+h1,
+h2 {
+  font-family: "Montserrat", sans-serif;
+  color: #fff;
+  text-align: center;
+}
+
+/* App Container */
+.app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+  overflow: hidden;
+  position: relative;
+}
+
+/* Flying Balloons Animation */
+.balloons-bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://example.com/balloon.png"); /* Replace with a valid balloon image */
+  background-repeat: repeat;
+  animation: flyBalloons 10s linear infinite;
+  z-index: -1;
+}
+
+@keyframes flyBalloons {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+/* Glitter Effect */
+.glitter-animation {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background: radial-gradient(circle, #ffe6fa, transparent);
+  animation: glitterFall 4s ease-in-out infinite;
+  z-index: 1;
+}
+
+@keyframes glitterFall {
+  0% {
+    opacity: 1;
+    transform: translateY(-10%) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(100%) scale(1.2);
+  }
+}
+
+/* Welcome Screen */
+.welcome-screen {
+  text-align: center;
+  padding: 2rem;
+  background: linear-gradient(145deg, #ff758c, #ff7eb3);
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transform: scale(0.95);
+  animation: fadeIn 1s ease-out forwards;
+}
+
+.welcome-screen h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+  color: #fff;
+}
+
+.welcome-screen button {
+  background-color: #ff6fb2;
+  color: #fff;
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: 30px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.welcome-screen button:hover {
+  background-color: #ff4788;
+  transform: translateY(-3px);
+}
+
+/* Choice Screen */
+.choice-screen {
+  text-align: center;
+  padding: 2rem;
+  background: #ff85b3;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transform: scale(0.95);
+  animation: fadeIn 1s ease-out forwards;
+}
+
+.choice-screen h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: #fff;
+}
+
+.choices button {
+  background-color: #ff6fb2;
+  color: #fff;
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: 30px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+  margin: 0.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.choices button:hover {
+  background-color: #ff4788;
+  transform: translateY(-3px);
+}
+
+/* Room Screen */
+.room {
+  text-align: center;
+  padding: 2rem;
+  border-radius: 15px;
+  transition: background-color 1s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+.room.lit {
+  background-color: #ffee58;
+}
+
+.room.dark {
+  background-color: #2c3e50;
+}
+
+.room button {
+  background-color: #ff6fb2;
+  color: #fff;
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: 30px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.room button:hover {
+  background-color: #ff4788;
+  transform: translateY(-3px);
+}
+
+.room h1 {
+  font-size: 2.5rem;
+  margin-top: 1rem;
+  color: #fff;
+}
+
+/* Cake Screen */
+.cake-screen {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: #ff758c;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transform: scale(0.95);
+  animation: fadeIn 1s ease-out forwards;
+}
+
+.cake {
+  font-size: 5rem;
+  margin-bottom: 2rem;
+}
+
+.cake-screen button {
+  background-color: #ff6fb2;
+  color: #fff;
+  border: none;
+  padding: 1rem 3rem;
+  border-radius: 30px;
+  font-size: 1.3rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.cake-screen button:hover {
+  background-color: #ff4788;
+  transform: translateY(-3px);
+}
+
+/* Flower Animation */
+.flowers-animation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.flowers-animation div {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 50px;
+  height: 50px;
+  background-image: url("https://example.com/flower.png"); /* Replace with a flower image */
+  background-size: contain;
+  background-repeat: no-repeat;
+  animation: dropFlower 5s linear infinite;
+}
+
+@keyframes dropFlower {
+  0% {
+    transform: translateY(-50px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
+
+/* Message */
+.message {
+  background-color: #fff;
+  color: #333;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 1.5rem;
+  animation: fadeIn 1s ease-out forwards;
+}
+
+.message h2 {
+  font-size: 1.8rem;
+  color: #333;
+  text-align: center;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
